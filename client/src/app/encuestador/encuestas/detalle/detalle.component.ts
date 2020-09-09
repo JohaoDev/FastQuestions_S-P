@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { WebServiceService } from '../../servicios/web-service.service';
-import { Chart} from 'chart.js'
+import { WebServiceService } from '../../../servicios/web-service.service';
+import { Chart } from 'chart.js';
 
 @Component({
   selector: 'app-detalle',
@@ -14,7 +14,7 @@ export class DetalleComponent implements OnInit {
 
   datosPersonas = [];
   chart = [];
-  doughnut =[];
+  doughnut = [];
 
   private url: string;
 

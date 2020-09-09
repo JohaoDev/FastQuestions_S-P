@@ -30,6 +30,7 @@ export class PermisosService {
       this.userRol = this.usuarioLogin.rol || null;
       delete this.usuarioLogin.sessionId;
       delete this.usuarioLogin.passw; //borramos el psw si esque llega
+      localStorage.setItem('token', token);
       return true;
     } else {
       return false;

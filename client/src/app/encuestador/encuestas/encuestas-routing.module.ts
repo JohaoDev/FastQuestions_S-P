@@ -4,13 +4,12 @@ import { EncuestasComponent } from './encuestas.component';
 import { DetalleComponent } from './detalle/detalle.component';
 
 const routes: Routes = [
-  {path: '', component:EncuestasComponent },
-  {path:'detalle', component:DetalleComponent}
-
+  { path: '', component: EncuestasComponent },
+  // {path:'detalle', component:DetalleComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class EncuestasRoutingModule { }
+export class EncuestasRoutingModule {}

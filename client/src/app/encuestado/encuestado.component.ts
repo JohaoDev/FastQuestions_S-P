@@ -40,9 +40,9 @@ export class EncuestadoComponent implements OnInit {
     this.http
       .get(`${this.url}get_encuestas`, this.servidor.obtenerHeaders())
       .subscribe((data: any) => {
-        console.log(data.data);
+        // console.log(data.data);
         data.data.forEach((item) => {
-          console.log(item);
+          // console.log(item);
           item.encuestados.forEach((element) => {
             if (element == userData.id) {
               this.encuestas.push(item);

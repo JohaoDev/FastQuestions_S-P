@@ -15,7 +15,7 @@ let autentica = (req, res, next) => {
       // console.log(decode);
       let token = jwt.sign({ data: decode.data }, process.env.KEY_JWT, {
         algorithm: "HS256",
-        expiresIn: 300,
+        expiresIn: 3600,
       });
       req.token = token;
       next();

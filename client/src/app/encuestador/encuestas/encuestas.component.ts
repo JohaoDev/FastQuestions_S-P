@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { WebServiceService } from '../servicios/web-service.service';
+import { WebServiceService } from '../../servicios/web-service.service';
 import { HttpClient } from '@angular/common/http';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-encuestas',
   templateUrl: './encuestas.component.html',
-  styleUrls: ['./encuestas.component.scss']
+  styleUrls: ['./encuestas.component.scss'],
 })
 export class EncuestasComponent implements OnInit {
-
-  encuestas=[];
+  encuestas = [];
   chart = [];
-  doughnut =[];
+  doughnut = [];
 
-  private url:string;
-  constructor( private servidor: WebServiceService,
-      private router:Router,
-      private http:HttpClient) { 
-      this.url=servidor.obtenerUrl();
-    }
-  
+  private url: string;
+  constructor(
+    private servidor: WebServiceService,
+    private router: Router,
+    private http: HttpClient
+  ) {
+    this.url = servidor.obtenerUrl();
+  }
+
   ngOnInit() {
     this.getEncuestas();
-   
   }
 
   // applyFilter(event: Event) {
@@ -40,8 +40,8 @@ export class EncuestasComponent implements OnInit {
       });
   }
 
-  detallesEncuesta(id):void{
-    localStorage.setItem("encuestaID", id),
-    this.router.navigate(['/encuestas/detalle']);
+  detallesEncuesta(id): void {
+    localStorage.setItem('encuestaID', id),
+      this.router.navigate(['/encuestas/detalle']);
   }
 }

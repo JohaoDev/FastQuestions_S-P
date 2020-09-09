@@ -1,3 +1,5 @@
+// local connection mongodb config
+
 const mongoose = require("mongoose"),
   { USER_DB, PASS_DB, HOST_DB, NAME_DB } = process.env;
 

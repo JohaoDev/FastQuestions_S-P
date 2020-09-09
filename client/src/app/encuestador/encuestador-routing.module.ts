@@ -6,7 +6,11 @@ import { NuevaEncuestaComponent } from './nueva-encuesta/nueva-encuesta.componen
 const routes: Routes = [
   { path: '', component: EncuestadorComponent },
   { path: 'nueva-encuesta', component: NuevaEncuestaComponent },
-  // {path: 'encuestas', loadChildren: () =>import('./encuestas/encuestas.module').then(m =>m.EncuestasModule)},
+  {
+    path: 'encuestas',
+    loadChildren: () =>
+      import('./encuestas/encuestas.module').then((m) => m.EncuestasModule),
+  },
 ];
 
 @NgModule({
