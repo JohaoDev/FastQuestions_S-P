@@ -55,11 +55,9 @@ export class CrudService {
       )
       .subscribe((data) => {
         if (data.transaccion) {
-          console.log('crud ok');
           returnData = data.data;
           this.permissions.decodeToken(data.token);
         } else {
-          console.log('crud false');
           alert(data.msg);
         }
       });

@@ -57,12 +57,12 @@ export class RegistrationComponent implements OnInit {
             email,
             passw,
             verifypassw,
-            rol: 'Encuestador',
+            rol: 'encuestador',
           },
         };
 
-        let user: any = this.crudService.postData(datos, 'nuevo_persona');
-        if ((user = ![])) {
+        let user: any = this.crudService.postData(datos, 'user');
+        if (user != []) {
           this.router.navigate(['/login']);
         } else {
           Swal.fire({

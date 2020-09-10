@@ -37,11 +37,12 @@ export class EncuestasComponent implements OnInit {
         data.data.forEach((element) => {
           this.encuestas.push(element);
         });
+        console.log(data.data);
       });
   }
 
   detallesEncuesta(id): void {
-    localStorage.setItem('encuestaID', id),
-      this.router.navigate(['/encuestas/detalle']);
+    localStorage.setItem('encuestaID', id);
+    this.router.navigate(['/encuestas/detalle']);
   }
 }
